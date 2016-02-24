@@ -1,5 +1,6 @@
 #include<iostream>
 #define SIZE 36
+
 using namespace std;
 
 int letter[SIZE];
@@ -11,6 +12,7 @@ int main()
 {
 	int case_amount;
 	cin >> case_amount;
+
 	for(int i = 1; i <= case_amount; i++)
 	{
 		for(int j = 0; j < SIZE; j++)
@@ -39,11 +41,12 @@ int main()
 void solve(int number)
 {
 	int min;
-	cout << "Cheapest base(s) for number " << number << ":";
+
 	for(int i = 2;i <= SIZE; i++)
 	{
 		ink_used[i] = 0;
 	}
+	
 	for(int i = 2;i <= SIZE; i++)
 	{
 		int ink = 0;
@@ -60,10 +63,14 @@ void solve(int number)
 		if(min > ink || i == 2)
 			min = ink;
 	}
+
+	cout << "Cheapest base(s) for number " << number << ":";
+	
 	for(int i = 2; i<= SIZE;i++)
 	{
 		if(ink_used[i] == min)
 			cout << " " << i;
 		cout << endl;
 	}
+
 }

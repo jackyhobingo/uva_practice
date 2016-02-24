@@ -5,11 +5,12 @@ using namespace std;
 int main()
 {
 	int n1, n2;
-	int bs = 0;
+	
 	while(cin >> n1 >> n2)
 	{
-		bool isBoring;
+		bool isBoring;	
 		int t = n1;
+	
 		while(true)
 		{
 			if(n1 < 2 || n2  < 2 || t % n2 != 0)
@@ -24,15 +25,21 @@ int main()
 				break;
 			}
 		}
+
 		if(isBoring)
+		{
 			cout << "Boring!" << endl;
-		else{
-			while(n1 != 1){
+		}
+		else
+		{
+			while(n1 != 1)
+			{
 				cout << n1 << " ";
 				n1 /= n2;
 			}
-			cout << "1" << endl;;
+			cout << "1" << endl;
 		}
 	}
+
 	return 0;
 }
