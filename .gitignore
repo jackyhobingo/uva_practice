@@ -1,3 +1,6 @@
 __pycache__
 *.out
 *.pyc
+.DS_Store
+*/.DS_Store
+*.*~
