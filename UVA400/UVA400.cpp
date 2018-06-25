@@ -27,7 +27,6 @@ int main()
         int R = 1+ (60 - max_len)/ (max_len + 2);
         sort(file.begin(), file.end());
         int r = n / R + (n % R > 0); 
-        if (R > 0){
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < R; j++){
                 if (i + j * r < n){
@@ -39,11 +38,5 @@ int main()
             }
             cout << endl;
         }
-        } else {
-            for (int i=0;i <n;i++) {
-                cout << file[i] << endl;
-            }
-        }
-        file.clear();
     }
 }
